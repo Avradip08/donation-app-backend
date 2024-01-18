@@ -7,7 +7,11 @@ const stripe = require("stripe")(process.env.STRIPE_PVT_SECRET);
 app.use(express.json());
 app.use(cors());
 
-
+app.get("/api/",async(req,res)=>{
+    // console.log("hello")
+    res.json({message :  "server is alive alive"})
+ 
+})
 
 //public key api
 app.get("/api/config",async(req,res)=>{
