@@ -8,16 +8,12 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/api/",async(req,res)=>{
-    // console.log("hello")
     res.json({message :  "server is alive alive"})
- 
 })
 
 //public key api
 app.get("/api/config",async(req,res)=>{
-    // console.log("hello")
     res.json({pkey :  process.env.STRIPE_PUBLIC_SECRET})
- 
 })
 
 // checkout api
@@ -44,7 +40,5 @@ app.post("/api/create-checkout-session",async(req,res)=>{
     res.json({id:session.id})
 })
 
-
 app.listen(7000,()=>{
-    console.log("server start")
 })
