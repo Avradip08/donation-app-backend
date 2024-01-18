@@ -34,8 +34,8 @@ app.post("/api/create-checkout-session",async(req,res)=>{
         payment_method_types:["card"],
         line_items:lineItems,
         mode:"payment",
-        success_url:"http://localhost:5174",
-        cancel_url:"http://localhost:5174",
+        success_url:"https://donation-app.pages.dev/",
+        cancel_url:"https://donation-app.pages.dev/",
     });
     res.json({id:session.id})
 })
